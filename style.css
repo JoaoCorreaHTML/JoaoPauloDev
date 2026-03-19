@@ -389,10 +389,11 @@ PROJETOS
 
 .projetos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .projeto {
@@ -417,7 +418,8 @@ PROJETOS
 
 .projeto img {
   width: 100%;
-  max-width: 300px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 20px;
   border: 3px solid var(--main);
   transition: var(--transition);
@@ -659,6 +661,11 @@ RESPONSIVIDADE
     gap: 2rem;
   }
 
+  .projetos-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .contato-card {
     width: 100%;
     max-width: 280px;
@@ -682,4 +689,4 @@ RESPONSIVIDADE
   .contato-card {
     padding: 1.5rem;
   }
-}
+    }
